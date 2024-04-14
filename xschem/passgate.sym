@@ -36,7 +36,7 @@ L 4 20 -0 40 0 {}
 B 5 37.5 -2.5 42.5 2.5 {name=Z dir=inout}
 B 5 -42.5 -2.5 -37.5 2.5 {name=A dir=inout}
 B 5 -2.5 -32.5 2.5 -27.5 {name=GP dir=in}
-B 5 -2.5 27.5 2.5 32.5 {name=VSSBPIN dir=in}
+B 5 -2.5 27.5 2.5 32.5 {name=GN dir=in}
 B 5 -22.5 27.5 -17.5 32.5 {name=VSSBPIN dir=in}
 B 5 -22.5 -32.5 -17.5 -27.5 {name=VCCBPIN dir=in}
 A 4 0 -15.625 5 180 360 {}
