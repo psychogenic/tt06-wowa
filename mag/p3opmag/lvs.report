@@ -1,0 +1,85 @@
+
+Circuit 1 cell sky130_fd_pr__res_xhigh_po_0p35 and Circuit 2 cell sky130_fd_pr__res_xhigh_po_0p35 are black boxes.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__res_xhigh_po_0p35 |Circuit 2: sky130_fd_pr__res_xhigh_po_0p35 
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__res_xhigh_po_0p35 and sky130_fd_pr__res_xhigh_po_0p35 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8_lvt and Circuit 2 cell sky130_fd_pr__nfet_01v8_lvt are black boxes.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__nfet_01v8_lvt     |Circuit 2: sky130_fd_pr__nfet_01v8_lvt     
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__nfet_01v8_lvt and sky130_fd_pr__nfet_01v8_lvt are equivalent.
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8_lvt and Circuit 2 cell sky130_fd_pr__pfet_01v8_lvt are black boxes.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__pfet_01v8_lvt     |Circuit 2: sky130_fd_pr__pfet_01v8_lvt     
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__pfet_01v8_lvt and sky130_fd_pr__pfet_01v8_lvt are equivalent.
+Flattening unmatched subcell sky130_fd_pr__res_xhigh_po_0p35_5BGKUX in circuit p3_opamp (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_lvt_8TELWR in circuit p3_opamp (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_VWWVRL in circuit p3_opamp (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_lvt_GW6ZVV in circuit p3_opamp (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_WWWVRA in circuit p3_opamp (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_lvt_ER3WAW in circuit p3_opamp (0)(1 instance)
+
+Class p3_opamp (0):  Merged 41 parallel devices.
+Subcircuit summary:
+Circuit 1: p3_opamp                        |Circuit 2: p3_opamp                        
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__res_xhigh_po_0p35 (1)        |sky130_fd_pr__res_xhigh_po_0p35 (1)        
+sky130_fd_pr__nfet_01v8_lvt (2)            |sky130_fd_pr__nfet_01v8_lvt (2)            
+sky130_fd_pr__nfet_01v8 (15->3)            |sky130_fd_pr__nfet_01v8 (3)                
+sky130_fd_pr__pfet_01v8_lvt (32->3)        |sky130_fd_pr__pfet_01v8_lvt (3)            
+Number of devices: 9                       |Number of devices: 9                       
+Number of nets: 9                          |Number of nets: 9                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: p3_opamp                        |Circuit 2: p3_opamp                        
+-------------------------------------------|-------------------------------------------
+VOUT                                       |VOUT                                       
+MINUS                                      |MINUS                                      
+PLUS                                       |PLUS                                       
+VDD                                        |VDD                                        
+VSS                                        |VSS                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes p3_opamp and p3_opamp are equivalent.
+
+Final result: Circuits match uniquely.
+.

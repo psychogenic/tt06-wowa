@@ -1,0 +1,91 @@
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__pfet_01v8         |Circuit 2: sky130_fd_pr__pfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8_lvt and Circuit 2 cell sky130_fd_pr__pfet_01v8_lvt are black boxes.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__pfet_01v8_lvt     |Circuit 2: sky130_fd_pr__pfet_01v8_lvt     
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__pfet_01v8_lvt and sky130_fd_pr__pfet_01v8_lvt are equivalent.
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8_lvt and Circuit 2 cell sky130_fd_pr__nfet_01v8_lvt are black boxes.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__nfet_01v8_lvt     |Circuit 2: sky130_fd_pr__nfet_01v8_lvt     
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__nfet_01v8_lvt and sky130_fd_pr__nfet_01v8_lvt are equivalent.
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_GGMWVD in circuit comparator_stefan (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_lvt_3VR9VM in circuit comparator_stefan (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_lvt_FMMQLY in circuit comparator_stefan (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_lvt_FMHZDY in circuit comparator_stefan (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_GGY9VD in circuit comparator_stefan (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_lvt_GWPMZG in circuit comparator_stefan (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_lvt_FMZK9W in circuit comparator_stefan (0)(4 instances)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_lvt_ZQZ9VD in circuit comparator_stefan (0)(2 instances)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_UGSVTG in circuit comparator_stefan (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_648S5X in circuit comparator_stefan (0)(1 instance)
+
+Subcircuit summary:
+Circuit 1: comparator_stefan               |Circuit 2: comparator_stefan               
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__pfet_01v8 (3)                |sky130_fd_pr__pfet_01v8 (3)                
+sky130_fd_pr__pfet_01v8_lvt (5)            |sky130_fd_pr__pfet_01v8_lvt (5)            
+sky130_fd_pr__nfet_01v8_lvt (6)            |sky130_fd_pr__nfet_01v8_lvt (6)            
+sky130_fd_pr__nfet_01v8 (1)                |sky130_fd_pr__nfet_01v8 (1)                
+Number of devices: 15                      |Number of devices: 15                      
+Number of nets: 14                         |Number of nets: 14                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: comparator_stefan               |Circuit 2: comparator_stefan               
+-------------------------------------------|-------------------------------------------
+MINUS                                      |MINUS                                      
+PLUS                                       |PLUS                                       
+DIFFOUT                                    |DIFFOUT                                    
+VSS                                        |VSS                                        
+ADJ                                        |ADJ                                        
+EN_N                                       |EN_N                                       
+VCC                                        |VCC                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes comparator_stefan and comparator_stefan are equivalent.
+
+Final result: Circuits match uniquely.
+.
