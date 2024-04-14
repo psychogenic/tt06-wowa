@@ -1,0 +1,17 @@
+* NGSPICE file created from lvtnot.ext - technology: sky130A
+
+.subckt sky130_fd_pr__nfet_01v8_lvt_648S5X a_n73_n100# a_n33_n188# a_15_n100# a_n175_n274#
+X0 a_15_n100# a_n33_n188# a_n73_n100# a_n175_n274# sky130_fd_pr__nfet_01v8_lvt ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=0.15
+**devattr s=11600,516 d=11600,516
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_lvt_4QFWD3 a_n93_n200# a_n35_n297# a_35_n200# w_n231_n419#
+X0 a_35_n200# a_n35_n297# a_n93_n200# w_n231_n419# sky130_fd_pr__pfet_01v8_lvt ad=0.58 pd=4.58 as=0.58 ps=4.58 w=2 l=0.35
+**devattr s=23200,916 d=23200,916
+.ends
+
+.subckt lvtnot y a VCCPIN VSSPIN
+XXM1 VSSPIN a y VSSPIN sky130_fd_pr__nfet_01v8_lvt_648S5X
+XXM2 VCCPIN a y VCCPIN sky130_fd_pr__pfet_01v8_lvt_4QFWD3
+.ends
+

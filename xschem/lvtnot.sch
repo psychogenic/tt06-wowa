@@ -39,3 +39,5 @@ nf=1 mult=1
 model=nfet_01v8_lvt
 spiceprefix=X
 }
+C {devices/ipin.sym} 40 -410 0 0 {name=p4 lab=VCCPIN}
+C {devices/ipin.sym} 40 -380 0 0 {name=p5 lab=VSSPIN}
