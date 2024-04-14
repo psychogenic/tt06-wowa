@@ -31,6 +31,10 @@ N 10 80 30 80 {
 lab=IN0}
 N 70 -130 90 -130 {
 lab=SEL_N}
+N -70 -250 -70 -220 {
+lab=VCC}
+N -70 -160 -70 -140 {
+lab=VSS}
 C {devices/ipin.sym} -250 -190 0 0 {name=p1 lab=SEL}
 C {devices/ipin.sym} 10 80 0 0 {name=p2 lab=IN0}
 C {devices/ipin.sym} 10 -60 0 0 {name=p3 lab=IN1}
@@ -42,6 +46,8 @@ C {devices/lab_pin.sym} 70 -10 0 0 {name=p7 sig_type=std_logic lab=SEL}
 C {devices/lab_pin.sym} 90 -130 2 0 {name=p9 sig_type=std_logic lab=SEL_N}
 C {devices/lab_pin.sym} 70 130 0 0 {name=p10 sig_type=std_logic lab=SEL_N}
 C {devices/lab_pin.sym} 70 40 0 0 {name=p11 sig_type=std_logic lab=SEL}
-C {/home/ttuser/wowa/xschem/passgate.sym} 70 -60 0 0 {name=x2 VCCBPIN=VCC VSSBPIN=VSS}
-C {/home/ttuser/wowa/xschem/passgate.sym} 70 80 0 0 {name=x3 VCCBPIN=VCC VSSBPIN=VSS}
-C {/home/ttuser/wowa/xschem/lvtnot.sym} -60 -190 0 0 {name=x1 VCCPIN=VCC VSSPIN=VSS}
+C {/home/ttuser/wowa/xschem/passgate.sym} 70 -60 0 0 {name=x2}
+C {/home/ttuser/wowa/xschem/passgate.sym} 70 80 0 0 {name=x3}
+C {/home/ttuser/wowa/xschem/lvtnot.sym} -60 -190 0 0 {name=x1}
+C {devices/lab_pin.sym} -70 -250 2 0 {name=p12 sig_type=std_logic lab=VCC}
+C {devices/lab_pin.sym} -70 -140 2 0 {name=p13 sig_type=std_logic lab=VSS}

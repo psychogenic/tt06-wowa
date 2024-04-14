@@ -16,11 +16,8 @@ v {xschem version=3.4.4 file_version=1.2
 }
 G {}
 K {type=subcircuit
-format="@name @pinlist @VCCBPIN @VSSBPIN @symname W_N=@W_N L_N=@L_N W_P=@W_P L_P=@L_P m=@m"
-template="name=x1 W_N=1 L_N=0.2 W_P=1 L_P=0.2 VCCBPIN=VCC VSSBPIN=VSS m=1"
-extra="VCCBPIN VSSBPIN"
-
-}
+format="@name @pinlist @symname"
+template="name=x1"}
 V {}
 S {}
 E {}
@@ -41,8 +38,8 @@ B 5 -42.5 -2.5 -37.5 2.5 {name=A dir=inout}
 B 5 -2.5 -32.5 2.5 -27.5 {name=GP dir=in}
 B 5 -2.5 27.5 2.5 32.5 {name=GN dir=in}
 A 4 0 -15.625 5 180 360 {}
-T {A} -35 -15 0 0 0.2 0.2 {}
+T {GN} 5 25 0 0 0.2 0.2 {}
 T {Z} 30 -15 0 0 0.2 0.2 {}
-T {@VCCBPIN} 7.5 -30 0 0 0.15 0.15 {}
-T {@VSSBPIN} 7.5 22.5 0 0 0.15 0.15 {}
 T {@name} 10 40 0 0 0.2 0.2 {}
+T {GP} 5 -45 0 0 0.2 0.2 {}
+T {A} -45 -15 0 0 0.2 0.2 {}

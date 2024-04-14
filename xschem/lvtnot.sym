@@ -17,11 +17,8 @@ v {xschem version=3.4.4 file_version=1.2
 G {}
 K {type=subcircuit
 function1="0 ~"
-format="@name @pinlist @VCCPIN @VSSPIN @symname W_N=@W_N L_N=@L_N W_P=@W_P L_P=@L_P m=@m"
-template="name=x1 m=1 
-+ W_N=1 L_N=0.15 W_P=2 L_P=0.35 
-+ VCCPIN=VCC VSSPIN=VSS"
-extra="VCCPIN VSSPIN"
+format="@name @pinlist @symname"
+template="name=x1"
 highlight=true
 }
 V {}
@@ -32,8 +29,12 @@ L 4 -27.5 -20 -27.5 20 {}
 L 4 -27.5 -20 16.25 0 {}
 L 4 -27.5 20 16.25 0 {}
 L 4 23.75 0 40 -0 {}
-B 5 -42.5 -2.5 -37.5 2.5 {name=a dir=in goto=1 propag=1}
-B 5 37.5 -2.5 42.5 2.5 {name=y dir=out verilog_type=wire}
+L 4 -10 -30 -10 -10 {}
+L 4 -10 10 -10 30 {}
+B 5 -42.5 -2.5 -37.5 2.5 {name=a dir=in}
+B 5 37.5 -2.5 42.5 2.5 {name=y dir=out}
+B 5 -12.5 -32.5 -7.5 -27.5 {name=VCCPIN dir=in}
+B 5 -12.5 27.5 -7.5 32.5 {name=VSSPIN dir=in}
 A 4 20 0 3.75 360 360 {}
 T {@name} -26.25 -5 0 0 0.2 0.2 {}
-T {@symname} 15 17.5 0 0 0.2 0.2 {layer=13 hcenter=true}
+T {@symname} 35 7.5 0 0 0.2 0.2 {layer=13 hcenter=true}
