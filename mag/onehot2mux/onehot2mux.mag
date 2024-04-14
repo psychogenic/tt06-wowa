@@ -1,8 +1,10 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1713135392
+timestamp 1713137925
 << metal1 >>
+rect -40 3710 160 3910
+rect 620 3740 3445 3910
 rect -550 3570 170 3610
 rect -550 3440 -200 3570
 rect -50 3440 170 3570
@@ -32,15 +34,18 @@ rect 2920 2985 3135 3090
 rect 2914 2830 2920 2985
 rect 3135 2830 3141 2985
 rect 2920 2820 3140 2830
+rect 3275 2575 3445 3740
 rect 610 2360 870 2380
+rect 2935 2405 3445 2575
 rect -88 2248 140 2340
 rect -272 2108 140 2248
 rect -260 2100 140 2108
-rect -60 1820 140 2020
+rect -40 1850 160 2050
 rect 790 1870 1270 2220
 rect 2030 2090 2280 2100
 rect 2030 1870 2040 2090
 rect 2270 1870 2280 2090
+rect 2935 2015 3105 2405
 rect 2030 1860 2280 1870
 << via1 >>
 rect -200 3440 -50 3570
@@ -241,8 +246,6 @@ timestamp 1713131218
 transform 1 0 -2260 0 1 2510
 box 2200 -700 3200 1400
 << labels >>
-flabel metal1 -60 1820 140 2020 0 FreeSans 1280 0 0 0 VSS
-port 5 nsew
 flabel metal1 2900 3100 3100 3300 0 FreeSans 1280 0 0 0 OUT
 port 3 nsew
 flabel metal1 -550 2830 -350 3030 0 FreeSans 1280 0 0 0 IN1
@@ -251,4 +254,9 @@ flabel metal1 -274 3110 -74 3310 0 FreeSans 1280 0 0 0 IN0
 port 1 nsew
 flabel metal1 -550 3410 -350 3610 0 FreeSans 1280 0 0 0 SEL
 port 0 nsew
+flabel metal1 -40 3710 160 3910 0 FreeSans 1280 0 0 0 VCC
+port 4 nsew
+flabel metal1 -40 1850 160 2050 0 FreeSans 1280 0 0 0 VSS
+port 5 nsew
+rlabel metal1 2360 3280 2820 3480 1 SEL_N
 << end >>

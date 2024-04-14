@@ -1,0 +1,40 @@
+magic
+tech sky130A
+timestamp 1713136326
+<< checkpaint >>
+rect -630 1430 1630 1980
+rect -630 -330 2049 1430
+rect -630 -1630 730 -330
+<< metal1 >>
+rect 0 0 100 100
+rect 0 -200 100 -100
+rect 0 -400 100 -300
+rect 0 -600 100 -500
+rect 0 -800 100 -700
+rect 0 -1000 100 -900
+use lvtnot  x1
+timestamp 1713131393
+transform 1 0 300 0 1 130
+box 700 170 1119 670
+use passgate  x2
+timestamp 1713131218
+transform 1 0 -1100 0 1 650
+box 1100 -350 1600 700
+use passgate  x3
+timestamp 1713131218
+transform 1 0 -600 0 1 650
+box 1100 -350 1600 700
+<< labels >>
+flabel metal1 0 0 100 100 0 FreeSans 640 0 0 0 SEL
+port 0 nsew
+flabel metal1 0 -200 100 -100 0 FreeSans 640 0 0 0 IN0
+port 1 nsew
+flabel metal1 0 -400 100 -300 0 FreeSans 640 0 0 0 IN1
+port 2 nsew
+flabel metal1 0 -600 100 -500 0 FreeSans 640 0 0 0 OUT
+port 3 nsew
+flabel metal1 0 -800 100 -700 0 FreeSans 640 0 0 0 VCC
+port 4 nsew
+flabel metal1 0 -1000 100 -900 0 FreeSans 640 0 0 0 VSS
+port 5 nsew
+<< end >>

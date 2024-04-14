@@ -24,6 +24,32 @@ Circuit 1: sky130_fd_pr__pfet_01v8_lvt     |Circuit 2: sky130_fd_pr__pfet_01v8_l
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes sky130_fd_pr__pfet_01v8_lvt and sky130_fd_pr__pfet_01v8_lvt are equivalent.
+
+Circuit 1 cell sky130_fd_pr__nfet_01v8 and Circuit 2 cell sky130_fd_pr__nfet_01v8 are black boxes.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__nfet_01v8         |Circuit 2: sky130_fd_pr__nfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__nfet_01v8 and sky130_fd_pr__nfet_01v8 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__pfet_01v8 and Circuit 2 cell sky130_fd_pr__pfet_01v8 are black boxes.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__pfet_01v8         |Circuit 2: sky130_fd_pr__pfet_01v8         
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+4                                          |4                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__pfet_01v8 and sky130_fd_pr__pfet_01v8 are equivalent.
 Flattening unmatched subcell sky130_fd_pr__nfet_01v8_lvt_648S5X in circuit lvtnot (0)(1 instance)
 Flattening unmatched subcell sky130_fd_pr__pfet_01v8_lvt_4QFWD3 in circuit lvtnot (0)(1 instance)
 
@@ -43,10 +69,60 @@ Circuit 1: lvtnot                          |Circuit 2: lvtnot
 y                                          |y                                          
 a                                          |a                                          
 VCCPIN                                     |VCCPIN                                     
-VSSPIN                                     |VSSPIN                                     
+VSUBS                                      |VSSPIN **Mismatch**                        
+---------------------------------------------------------------------------------------
+Cell pin lists for lvtnot and lvtnot altered to match.
+Device classes lvtnot and lvtnot are equivalent.
+Flattening unmatched subcell sky130_fd_pr__nfet_01v8_Q7AWK3 in circuit passgate (0)(1 instance)
+Flattening unmatched subcell sky130_fd_pr__pfet_01v8_SKB8XJ in circuit passgate (0)(1 instance)
+
+Subcircuit summary:
+Circuit 1: passgate                        |Circuit 2: passgate                        
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__nfet_01v8 (1)                |sky130_fd_pr__nfet_01v8 (1)                
+sky130_fd_pr__pfet_01v8 (1)                |sky130_fd_pr__pfet_01v8 (1)                
+Number of devices: 2                       |Number of devices: 2                       
+Number of nets: 6                          |Number of nets: 6                          
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: passgate                        |Circuit 2: passgate                        
+-------------------------------------------|-------------------------------------------
+A                                          |A                                          
+Z                                          |Z                                          
+GN                                         |GN                                         
+VSUBS                                      |VSSBPIN **Mismatch**                       
+GP                                         |GP                                         
+VCCBPIN                                    |VCCBPIN                                    
+---------------------------------------------------------------------------------------
+Cell pin lists for passgate and passgate altered to match.
+Device classes passgate and passgate are equivalent.
+
+Subcircuit summary:
+Circuit 1: onehot2mux                      |Circuit 2: onehot2mux                      
+-------------------------------------------|-------------------------------------------
+lvtnot (1)                                 |lvtnot (1)                                 
+passgate (2)                               |passgate (2)                               
+Number of devices: 3                       |Number of devices: 3                       
+Number of nets: 7                          |Number of nets: 7                          
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: onehot2mux                      |Circuit 2: onehot2mux                      
+-------------------------------------------|-------------------------------------------
+OUT                                        |OUT                                        
+IN0                                        |IN0                                        
+IN1                                        |IN1                                        
+SEL                                        |SEL                                        
+VSS                                        |VSS                                        
+VCC                                        |VCC                                        
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
-Device classes lvtnot and lvtnot are equivalent.
+Device classes onehot2mux and onehot2mux are equivalent.
 
 Final result: Circuits match uniquely.
 .
