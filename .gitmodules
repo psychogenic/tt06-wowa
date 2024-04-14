@@ -1,0 +1,6 @@
+[submodule "tt06-tiny-opamp"]
+	path = tt06-tiny-opamp
+	url = https://github.com/argunda/tt06-tiny-opamp.git
+[submodule "tt06-analog-r2r-dac"]
+	path = tt06-analog-r2r-dac
+	url = https://github.com/mattvenn/tt06-analog-r2r-dac.git
