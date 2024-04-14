@@ -1,0 +1,17 @@
+* NGSPICE file created from passgate.ext - technology: sky130A
+
+.subckt sky130_fd_pr__nfet_01v8_L7T3GD a_n33_n130# a_15_n42# a_n175_n216# a_n73_n42#
+X0 a_15_n42# a_n33_n130# a_n73_n42# a_n175_n216# sky130_fd_pr__nfet_01v8 ad=0.1218 pd=1.42 as=0.1218 ps=1.42 w=0.42 l=0.15
+**devattr s=4872,284 d=4872,284
+.ends
+
+.subckt sky130_fd_pr__pfet_01v8_M479BZ a_15_n42# w_n211_n261# a_n33_n139# a_n73_n42#
+X0 a_15_n42# a_n33_n139# a_n73_n42# w_n211_n261# sky130_fd_pr__pfet_01v8 ad=0.1218 pd=1.42 as=0.1218 ps=1.42 w=0.42 l=0.15
+**devattr s=4872,284 d=4872,284
+.ends
+
+.subckt passgate Z A GP GN VCCBPIN VSSBPIN
+XXM1 GN Z VSSBPIN A sky130_fd_pr__nfet_01v8_L7T3GD
+XXM2 Z VCCBPIN GP A sky130_fd_pr__pfet_01v8_M479BZ
+.ends
+
