@@ -35,6 +35,12 @@ N -70 -250 -70 -220 {
 lab=VCC}
 N -70 -160 -70 -140 {
 lab=VSS}
+N 10 110 50 110 {
+lab=SEL_N}
+N 20 -30 50 -30 {
+lab=SEL}
+N 20 -90 50 -90 {}
+N 20 50 50 50 {}
 C {devices/ipin.sym} -250 -190 0 0 {name=p1 lab=SEL}
 C {devices/ipin.sym} 10 80 0 0 {name=p2 lab=IN0}
 C {devices/ipin.sym} 10 -60 0 0 {name=p3 lab=IN1}
@@ -51,3 +57,7 @@ C {/home/ttuser/wowa/xschem/passgate.sym} 70 80 0 0 {name=x3}
 C {/home/ttuser/wowa/xschem/lvtnot.sym} -60 -190 0 0 {name=x1}
 C {devices/lab_pin.sym} -70 -250 2 0 {name=p12 sig_type=std_logic lab=VCC}
 C {devices/lab_pin.sym} -70 -140 2 0 {name=p13 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 10 110 0 0 {name=p14 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 20 -30 0 0 {name=p15 sig_type=std_logic lab=VSS}
+C {devices/lab_pin.sym} 20 -90 0 0 {name=p16 sig_type=std_logic lab=VCC}
+C {devices/lab_pin.sym} 20 50 0 0 {name=p17 sig_type=std_logic lab=VCC}
