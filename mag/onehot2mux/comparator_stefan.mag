@@ -415,6 +415,13 @@ timestamp 1713150084
 transform 1 0 10646 0 1 7820
 box -996 -260 996 260
 << labels >>
+rlabel metal1 15330 9380 15540 9430 1 pg2g
+rlabel metal1 11590 7520 12130 7780 1 G1
+rlabel metal1 9730 9120 9890 9220 1 p2p
+rlabel metal2 14080 7130 15980 7330 1 G2
+rlabel metal1 11440 8050 11520 8380 1 n2n
+rlabel metal2 12959 9321 13771 9499 1 inhigh
+rlabel metal1 14230 9507 14449 9590 1 mirhigh
 flabel metal1 9850 10310 10050 10510 0 FreeSans 1280 0 0 0 VCC
 port 2 nsew
 flabel metal1 9800 6090 10000 6290 0 FreeSans 1280 0 0 0 VSS
@@ -423,22 +430,10 @@ flabel metal1 12240 7560 12440 7760 0 FreeSans 1280 0 0 0 MINUS
 port 1 nsew
 flabel metal1 13300 7560 13500 7760 0 FreeSans 1280 0 0 0 PLUS
 port 0 nsew
-rlabel metal1 15330 9380 15540 9430 1 pg2g
-rlabel metal1 11590 7520 12130 7780 1 G1
-rlabel metal2 14080 7130 15980 7330 1 G2
 flabel metal1 15411 8730 15611 8930 0 FreeSans 1280 0 0 0 DIFFOUT
 port 6 nsew
 flabel metal1 10510 8830 10710 9030 0 FreeSans 1280 0 0 0 ADJ
 port 5 nsew
 flabel metal1 10510 9140 10710 9340 0 FreeSans 1280 0 0 0 EN_N
 port 4 nsew
-rlabel metal1 9730 9120 9890 9220 1 p2p
-rlabel metal1 11440 8050 11520 8380 1 n2n
-rlabel metal2 12959 9321 13771 9499 1 inhigh
-rlabel metal1 9460 5990 11850 6430 1 VSS
-rlabel metal1 9450 9970 11490 10720 1 VCC
-rlabel metal2 15590 8170 16990 8350 1 DIFFOUT
-rlabel metal1 12270 8690 12390 9020 1 MINUS
-rlabel metal1 13340 8710 13460 9040 1 PLUS
-rlabel metal1 14230 9507 14449 9590 1 mirhigh
 << end >>

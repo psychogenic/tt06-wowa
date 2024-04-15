@@ -51,7 +51,7 @@ X0 a_15_n100# a_n33_n188# a_n73_n100# a_n175_n274# sky130_fd_pr__nfet_01v8 ad=0.
 **devattr s=11600,516 d=11600,516
 .ends
 
-.subckt comparator_stefan PLUS MINUS VCC VSS EN_N ADJ DIFFOUT G2
+.subckt comparator_stefan PLUS MINUS VCC VSS EN_N ADJ DIFFOUT
 XXM12 VCC EN_N VCC p2p sky130_fd_pr__pfet_01v8_GGMWVD
 XXM13 VCC ADJ G1 p2p sky130_fd_pr__pfet_01v8_lvt_3VR9VM
 XXM14 G1 ADJ VSS n2n sky130_fd_pr__nfet_01v8_lvt_FMMQLY
@@ -118,7 +118,7 @@ X3 c1_n1146_n4480# m3_n1186_n4520# sky130_fd_pr__cap_mim_m3_1 l=10 w=10
 .ends
 
 .subckt calibrated_comparator VCC VSS INPUT THRESHV CALIB RESULT EN_N
-Xx1 x3/OUT THRESHV VCC VSS EN_N x2/OUT RESULT x1/G2 comparator_stefan
+Xx1 x3/OUT THRESHV VCC VSS EN_N x2/OUT RESULT comparator_stefan
 Xx2 CALIB RESULT x2/OUT VCC VSS analogswitch
 Xx3 CALIB INPUT THRESHV x3/OUT VCC VSS onehot2mux
 XXC1 VSS x2/OUT sky130_fd_pr__cap_mim_m3_1_4HHTN9

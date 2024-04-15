@@ -51,6 +51,6 @@ C {devices/lab_pin.sym} -190 -280 0 0 {name=p20 lab=CALIB}
 C {devices/lab_pin.sym} -190 -180 0 0 {name=p21 lab=VCC}
 C {devices/lab_pin.sym} -190 -160 0 0 {name=p22 lab=VSS}
 C {devices/opin.sym} -60 -350 0 0 {name=p23 lab=RESULT}
-C {sky130_fd_pr/cap_mim_m3_2.sym} 580 -400 0 0 {name=C1 model=cap_mim_m3_2 W=15 L=15 MF=5 spiceprefix=X}
 C {devices/lab_pin.sym} 580 -350 0 0 {name=p24 lab=VSS}
 C {devices/ipin.sym} -50 -460 0 0 {name=p25 lab=EN_N}
+C {sky130_fd_pr/cap_mim_m3_1.sym} 580 -400 0 0 {name=C1 model=cap_mim_m3_1 W=10 L=10 MF=4 spiceprefix=X}
