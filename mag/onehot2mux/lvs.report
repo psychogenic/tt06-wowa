@@ -102,27 +102,26 @@ Cell pin lists for passgate and passgate altered to match.
 Device classes passgate and passgate are equivalent.
 
 Subcircuit summary:
-Circuit 1: onehot2mux                      |Circuit 2: onehot2mux                      
+Circuit 1: analogswitch                    |Circuit 2: analogswitch                    
 -------------------------------------------|-------------------------------------------
 lvtnot (1)                                 |lvtnot (1)                                 
-passgate (2)                               |passgate (2)                               
-Number of devices: 3                       |Number of devices: 3                       
-Number of nets: 7                          |Number of nets: 7                          
+passgate (1)                               |passgate (1)                               
+Number of devices: 2                       |Number of devices: 2                       
+Number of nets: 6                          |Number of nets: 6                          
 ---------------------------------------------------------------------------------------
 Netlists match uniquely.
 
 Subcircuit pins:
-Circuit 1: onehot2mux                      |Circuit 2: onehot2mux                      
+Circuit 1: analogswitch                    |Circuit 2: analogswitch                    
 -------------------------------------------|-------------------------------------------
 OUT                                        |OUT                                        
-IN0                                        |IN0                                        
-IN1                                        |IN1                                        
-SEL                                        |SEL                                        
+IN                                         |IN                                         
+EN                                         |EN                                         
 VSS                                        |VSS                                        
 VCC                                        |VCC                                        
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
-Device classes onehot2mux and onehot2mux are equivalent.
+Device classes analogswitch and analogswitch are equivalent.
 
 Final result: Circuits match uniquely.
 .

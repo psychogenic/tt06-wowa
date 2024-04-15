@@ -1,10 +1,7 @@
 magic
 tech sky130A
 magscale 1 2
-timestamp 1713128311
-<< checkpaint >>
-rect -1635 0 1834 1460
-rect 0 -5680 1834 0
+timestamp 1713131393
 << pwell >>
 rect 1740 560 1880 600
 rect 1710 550 1880 560
@@ -44,6 +41,7 @@ rect 1940 580 1950 640
 rect 2020 580 2030 640
 rect 1720 560 1900 580
 rect 1710 550 1900 560
+rect 1420 520 1620 540
 rect 1680 520 1940 550
 rect 1420 480 2160 520
 rect 1420 430 1620 480
@@ -78,11 +76,11 @@ transform 0 1 1819 -1 0 1071
 box -231 -419 231 419
 << labels >>
 flabel metal1 1420 700 1620 900 0 FreeSans 1280 0 0 0 a
-port 1 nsew
-flabel metal1 2020 700 2220 900 0 FreeSans 1280 0 0 0 y
 port 0 nsew
-flabel metal1 1420 340 1620 540 0 FreeSans 1280 0 0 0 VSSPIN
-port 3 nsew
+flabel metal1 2020 700 2220 900 0 FreeSans 1280 0 0 0 y
+port 1 nsew
 flabel metal1 1420 1140 1620 1340 0 FreeSans 1280 0 0 0 VCCPIN
 port 2 nsew
+flabel metal1 1420 340 1620 540 0 FreeSans 1280 0 0 0 VSSPIN
+port 3 nsew
 << end >>
