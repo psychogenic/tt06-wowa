@@ -1,4 +1,4 @@
-* NGSPICE file created from calibrated_comparator.ext - technology: sky130A
+* NGSPICE file created from wowa_analog.ext - technology: sky130A
 
 .subckt sky130_fd_pr__pfet_01v8_GGMWVD w_n996_n319# a_n800_n197# a_800_n100# a_n858_n100#
 X0 a_800_n100# a_n800_n197# a_n858_n100# w_n996_n319# sky130_fd_pr__pfet_01v8 ad=0.29 pd=2.58 as=0.29 ps=2.58 w=1 l=8
@@ -117,10 +117,44 @@ X2 c1_n1146_n4480# m3_n1186_n4520# sky130_fd_pr__cap_mim_m3_1 l=10 w=10
 X3 c1_n1146_n4480# m3_n1186_n4520# sky130_fd_pr__cap_mim_m3_1 l=10 w=10
 .ends
 
-.subckt calibrated_comparator VCC VSS INPUT THRESHV CALIB RESULT EN_N
+.subckt calibrated_comparator INPUT THRESHV RESULT EN_N CALIB VCC VSS
 Xx1 x3/OUT THRESHV VCC VSS EN_N x2/OUT RESULT comparator_stefan
 Xx2 CALIB RESULT x2/OUT VCC VSS analogswitch
 Xx3 CALIB INPUT THRESHV x3/OUT VCC VSS onehot2mux
 XXC1 VSS x2/OUT sky130_fd_pr__cap_mim_m3_1_4HHTN9
+.ends
+
+.subckt sky130_fd_pr__res_high_po_0p35_3KK54B a_n35_n4432# a_n35_4000# a_n165_n4562#
+X0 a_n35_4000# a_n35_n4432# a_n165_n4562# sky130_fd_pr__res_high_po_0p35 l=40.16
+.ends
+
+.subckt sky130_fd_pr__res_high_po_0p35_QPS5FG a_n165_n2562# a_n35_n2432# a_n35_2000#
+X0 a_n35_2000# a_n35_n2432# a_n165_n2562# sky130_fd_pr__res_high_po_0p35 l=20.16
+.ends
+
+.subckt r2r b0 b1 b2 b3 b4 b5 b6 b7 out VSUBS GND
+XXR1 m1_n1840_11060# b0 VSUBS sky130_fd_pr__res_high_po_0p35_3KK54B
+XXR10 VSUBS m1_n1040_2660# m1_n440_7180# sky130_fd_pr__res_high_po_0p35_QPS5FG
+XXR2 m1_n1040_2660# b1 VSUBS sky130_fd_pr__res_high_po_0p35_3KK54B
+XXR11 VSUBS m1_160_2660# m1_n440_7180# sky130_fd_pr__res_high_po_0p35_QPS5FG
+XXR3 m1_n440_7180# b2 VSUBS sky130_fd_pr__res_high_po_0p35_3KK54B
+XXR5 m1_760_7180# b4 VSUBS sky130_fd_pr__res_high_po_0p35_3KK54B
+XXR12 VSUBS m1_160_2660# m1_760_7180# sky130_fd_pr__res_high_po_0p35_QPS5FG
+XXR4 m1_160_2660# b3 VSUBS sky130_fd_pr__res_high_po_0p35_3KK54B
+XXR14 VSUBS m1_1360_2660# m1_1960_7180# sky130_fd_pr__res_high_po_0p35_QPS5FG
+XXR6 m1_1360_2660# b5 VSUBS sky130_fd_pr__res_high_po_0p35_3KK54B
+XXR13 VSUBS m1_1360_2660# m1_760_7180# sky130_fd_pr__res_high_po_0p35_QPS5FG
+XXR15 VSUBS out m1_1960_7180# sky130_fd_pr__res_high_po_0p35_QPS5FG
+XXR7 m1_1960_7180# b6 VSUBS sky130_fd_pr__res_high_po_0p35_3KK54B
+XXR8 out b7 VSUBS sky130_fd_pr__res_high_po_0p35_3KK54B
+XXR16 GND m1_n1840_11060# VSUBS sky130_fd_pr__res_high_po_0p35_3KK54B
+XXR9 VSUBS m1_n1040_2660# m1_n1840_11060# sky130_fd_pr__res_high_po_0p35_QPS5FG
+.ends
+
+.subckt wowa_analog b0 b1 b2 b3 b4 b5 b6 b7 EN_N CAL INPUT EXTTHRESH USEEXT VCC VSS
++ COMPOUT
+Xx1 INPUT x3/OUT COMPOUT EN_N CAL VCC VSS calibrated_comparator
+Xx2 b0 b1 b2 b3 b4 b5 b6 b7 x3/IN0 VSS VSS r2r
+Xx3 USEEXT x3/IN0 EXTTHRESH x3/OUT VCC VSS onehot2mux
 .ends
 

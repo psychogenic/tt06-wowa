@@ -111,6 +111,18 @@ Circuit 1: sky130_fd_pr__cap_mim_m3_1      |Circuit 2: sky130_fd_pr__cap_mim_m3_
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes sky130_fd_pr__cap_mim_m3_1 and sky130_fd_pr__cap_mim_m3_1 are equivalent.
+
+Circuit 1 cell sky130_fd_pr__res_high_po_0p35 and Circuit 2 cell sky130_fd_pr__res_high_po_0p35 are black boxes.
+
+Subcircuit pins:
+Circuit 1: sky130_fd_pr__res_high_po_0p35  |Circuit 2: sky130_fd_pr__res_high_po_0p35  
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes sky130_fd_pr__res_high_po_0p35 and sky130_fd_pr__res_high_po_0p35 are equivalent.
 Flattening unmatched subcell sky130_fd_pr__pfet_01v8_GGMWVD in circuit comparator_stefan (0)(1 instance)
 Flattening unmatched subcell sky130_fd_pr__pfet_01v8_lvt_3VR9VM in circuit comparator_stefan (0)(1 instance)
 Flattening unmatched subcell sky130_fd_pr__nfet_01v8_lvt_FMMQLY in circuit comparator_stefan (0)(1 instance)
@@ -220,6 +232,71 @@ CALIB                                      |CALIB
 ---------------------------------------------------------------------------------------
 Cell pin lists are equivalent.
 Device classes calibrated_comparator and calibrated_comparator are equivalent.
+Flattening unmatched subcell sky130_fd_pr__res_high_po_0p35_3KK54B in circuit r2r (0)(9 instances)
+Flattening unmatched subcell sky130_fd_pr__res_high_po_0p35_QPS5FG in circuit r2r (0)(7 instances)
+
+Subcircuit summary:
+Circuit 1: r2r                             |Circuit 2: r2r                             
+-------------------------------------------|-------------------------------------------
+sky130_fd_pr__res_high_po_0p35 (16)        |sky130_fd_pr__res_high_po_0p35 (16)        
+Number of devices: 16                      |Number of devices: 16                      
+Number of nets: 18                         |Number of nets: 18                         
+---------------------------------------------------------------------------------------
+Resolving symmetries by property value.
+Resolving symmetries by pin name.
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: r2r                             |Circuit 2: r2r                             
+-------------------------------------------|-------------------------------------------
+out                                        |out                                        
+VSUBS                                      |VSUBS                                      
+b7                                         |b7                                         
+b6                                         |b6                                         
+b1                                         |b1                                         
+b3                                         |b3                                         
+b4                                         |b4                                         
+b2                                         |b2                                         
+b5                                         |b5                                         
+b0                                         |b0                                         
+GND                                        |GND                                        
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes r2r and r2r are equivalent.
+
+Subcircuit summary:
+Circuit 1: wowa_analog                     |Circuit 2: wowa_analog                     
+-------------------------------------------|-------------------------------------------
+calibrated_comparator (1)                  |calibrated_comparator (1)                  
+r2r (1)                                    |r2r (1)                                    
+onehot2mux (1)                             |onehot2mux (1)                             
+Number of devices: 3                       |Number of devices: 3                       
+Number of nets: 18                         |Number of nets: 18                         
+---------------------------------------------------------------------------------------
+Netlists match uniquely.
+
+Subcircuit pins:
+Circuit 1: wowa_analog                     |Circuit 2: wowa_analog                     
+-------------------------------------------|-------------------------------------------
+VSS                                        |VSS                                        
+VCC                                        |VCC                                        
+INPUT                                      |INPUT                                      
+COMPOUT                                    |COMPOUT                                    
+CAL                                        |CAL                                        
+EN_N                                       |EN_N                                       
+b0                                         |b0                                         
+b1                                         |b1                                         
+b2                                         |b2                                         
+b3                                         |b3                                         
+b4                                         |b4                                         
+b5                                         |b5                                         
+b6                                         |b6                                         
+b7                                         |b7                                         
+USEEXT                                     |USEEXT                                     
+EXTTHRESH                                  |EXTTHRESH                                  
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes wowa_analog and wowa_analog are equivalent.
 
 Final result: Circuits match uniquely.
 .
