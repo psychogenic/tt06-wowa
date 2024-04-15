@@ -43,10 +43,7 @@ class ComparatorResult(Elaboratable):
         
         # the synchronizer itself
         # add it to the submodules being used
-        if True:
-            m.d.sync += self.output.eq(self.input)
-        else:
-            m.submodules.ffsync  = FFSynchronizer(i=self.input, o=self.output, 
+        m.submodules.ffsync  = FFSynchronizer(i=self.input, o=self.output, 
                                                       stages=self.numStages) 
         
         

@@ -25,7 +25,7 @@ class Comparator(Elaboratable):
     def __init__(self, numStages:int = config.NumInputSynchronizerStagesDefault):
         #inputs
         self.analog_comp_input = Signal()
-        self.enable = Signal()
+        self.n_enable = Signal()
         self.calibrate = Signal()
         self.use_external_reference = Signal()
         
@@ -37,7 +37,8 @@ class Comparator(Elaboratable):
         
     
     def ports(self):
-        return [self.enable, self.calibrate, self.use_external, self.result]
+        return [self.analog_comp_input, self.n_enable, self.calibrate, 
+                self.use_external_reference, self.result]
     
     @property 
     def numStages(self):

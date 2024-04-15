@@ -13,7 +13,7 @@ from amaranth.lib.cdc import FFSynchronizer
 import wowa.config as config
 
 from wowa.comparator import Comparator
-from wowa.dac import R2RDAC
+# from wowa.dac import R2RDAC
 
 from enum import Enum, unique
 from amaranth.compat.genlib.fsm import FSM
@@ -47,10 +47,11 @@ class ADC(Elaboratable):
         self.result_ready = Signal()
         self.result = Signal(config.DACNumBits)
         self.calib_done = Signal()
+        self.comparator_enable_ctrl = Signal()
         
         
         self.comparator = Comparator(config.NumInputSynchronizerStagesDefault)
-        self.dac = R2RDAC(config.DACNumBits)
+        self.dac_setting = Signal(config.DACNumBits) # R2RDAC(config.DACNumBits)
         self.state = Signal(FSMState)
         
         # debug
@@ -63,19 +64,20 @@ class ADC(Elaboratable):
     def ports(self):
         return [self.enable, self.use_calibration, self.analog_comparator_pin, 
                 self.use_external_reference, self.result_ready, self.result,
-                self.calib_done]
+                self.calib_done, self.comparator_enable_ctrl]
     
     
     
     def elaborate(self, platform:Platform):
         m = Module()
         m.submodules.comparator = self.comparator
-        m.submodules.dac = self.dac 
+        # m.submodules.dac = self.dac 
         
         
         m.d.comb += [
             self.comparator.analog_comp_input.eq(self.analog_comparator_pin),
-            self.comparator.use_external_reference.eq(self.use_external_reference)
+            self.comparator.use_external_reference.eq(self.use_external_reference),
+            self.comparator_enable_ctrl.eq(self.comparator.n_enable)
         ]
         internalCounter = self.internalCounter
         syncroCount = Signal(range(config.NumInputSynchronizerStagesDefault + 1))
@@ -84,15 +86,15 @@ class ADC(Elaboratable):
             with m.Case(FSMState.Startup):
                 m.d.sync += [
                     self.comparator.calibrate.eq(0),
-                    self.comparator.enable.eq(0),
+                    self.comparator.n_enable.eq(1),
                     self.state.eq(FSMState.Idle)
                 ]
                 
             with m.Case(FSMState.Idle):
                 with m.If(self.enable.bool()):
                     m.d.sync += [
-                        self.dac.value.eq(0),
-                        self.comparator.enable.eq(1),
+                        self.dac_setting.eq(0),
+                        self.comparator.n_enable.eq(0),
                         
                     ]
                     with m.If(self.use_calibration):
@@ -108,7 +110,7 @@ class ADC(Elaboratable):
                                 ]
                 with m.Else():
                     m.d.sync += [ 
-                        self.comparator.enable.eq(0),
+                        self.comparator.n_enable.eq(1),
                         self.result.eq(0)
                     ]
             
@@ -146,7 +148,7 @@ class ADC(Elaboratable):
                         
                 m.d.sync += [
                     self.state.eq(FSMState.MeasureDACON),
-                    self.dac.value.eq(self.result)
+                    self.dac_setting.eq(self.result)
                 ]
 
             with m.Case(FSMState.MeasureDACON):
