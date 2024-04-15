@@ -5,50 +5,7 @@ K {}
 V {}
 S {}
 E {}
-B 2 230 -290 1030 110 {flags=graph
-y1=0.38
-y2=2.28
-ypos1=0
-ypos2=2
-divy=5
-subdivy=1
-unity=1
-x1=-3.8708e-08
-x2=9.6129e-07
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-node="sel
-x1.sel_n"
-color="4 7"
-dataset=-1
-unitx=1
-logx=0
-logy=0
-}
-B 2 260 -800 1060 -400 {flags=graph
-y1=0.34
-y2=1.8
-ypos1=0
-ypos2=2
-divy=5
-subdivy=1
-unity=1
-x1=-3.8708e-08
-x2=9.6129e-07
-divx=5
-subdivx=1
-xlabmag=1.0
-ylabmag=1.0
-node=out
-color=7
-dataset=-1
-unitx=1
-logx=0
-logy=0
-}
-B 2 230 300 1030 700 {flags=graph
+B 2 500 -420 1300 -20 {flags=graph
 y1=0
 y2=1.9
 ypos1=0
@@ -56,45 +13,91 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-3.8708e-08
-x2=9.6129e-07
+x1=1e-11
+x2=3.2e-06
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
-node="vss
-vcc"
-color="4 7"
+node=x1.insig
+color=4
 dataset=-1
 unitx=1
 logx=0
 logy=0
 }
-B 2 270 -1240 1070 -840 {flags=graph
-y1=0.5
-y2=1.8
+B 2 500 400 1300 800 {flags=graph
+y1=-0.0035
+y2=1.9
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=-3.8708e-08
-x2=9.6129e-07
+x1=1e-11
+x2=3.2e-06
 divx=5
 subdivx=1
 xlabmag=1.0
 ylabmag=1.0
-node="in0
-in1"
-color="7 8"
+node=result
+color=7
 dataset=-1
 unitx=1
 logx=0
 logy=0
 }
-C {/home/ttuser/wowa/xschem/onehot2mux.sym} 10 0 0 0 {name=x1}
-C {sky130_fd_pr/corner.sym} -420 310 0 0 {name=CORNER only_toplevel=true corner=tt_mm}
-C {devices/code.sym} -400 120 0 0 {name=stimuli only_toplevel=false value="
+B 2 500 -10 1300 390 {flags=graph
+y1=0
+y2=1.9
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=1e-11
+x2=3.2e-06
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+node=calib
+color=4
+dataset=-1
+unitx=1
+logx=0
+logy=0
+}
+B 2 500 -840 1300 -440 {flags=graph
+y1=0
+y2=1.9
+ypos1=0
+ypos2=2
+divy=5
+subdivy=1
+unity=1
+x1=1e-11
+x2=3.2e-06
+divx=5
+subdivx=1
+xlabmag=1.0
+ylabmag=1.0
+node=input
+color=4
+dataset=-1
+unitx=1
+logx=0
+logy=0
+}
+C {/home/ttuser/wowa/xschem/calibrated_comparator.sym} 230 -100 0 0 {name=x1}
+C {devices/lab_pin.sym} 80 -40 0 0 {name=p1 lab=VCC}
+C {devices/lab_pin.sym} 80 -20 0 0 {name=p2 lab=VSS}
+C {devices/lab_pin.sym} 80 -90 0 0 {name=p3 lab=INPUT}
+C {devices/lab_pin.sym} 80 -110 0 0 {name=p4 lab=THRESHV}
+C {devices/lab_pin.sym} 260 -100 0 1 {name=p5 lab=RESULT}
+C {devices/lab_pin.sym} 80 -160 0 0 {name=p6 lab=CALIB}
+C {sky130_fd_pr/corner.sym} -300 -190 0 0 {name=CORNER only_toplevel=true corner=tt_mm}
+C {devices/code.sym} -280 -380 0 0 {name=stimuli only_toplevel=false value="
 ** this experimental option enables mos model bin 
 ** selection based on W/NF instead of W
 .option chgtol=4e-16 method=gear
@@ -113,7 +116,7 @@ C {devices/code.sym} -400 120 0 0 {name=stimuli only_toplevel=false value="
 * .option temp = 25
 .param DELTA = 0.002
 
-.include stimuli_tb_onehot2mux.cir
+.include stimuli_tb_calibrated_comparator.cir
 
 .control
   setseed  8
@@ -121,26 +124,20 @@ C {devices/code.sym} -400 120 0 0 {name=stimuli only_toplevel=false value="
   let run = 1
   save all
   op
-  write tb_onehot2mux.raw
+  write tb_calibrated_comparator.raw
   reset
   set appendwrite
-  dowhile run < = 50
+  dowhile run < = 5
     save all
-    tran 1n 1000n uic
-    write tb_onehot2mux.raw
+    tran 1n 3200n uic
+    write tb_calibrated_comparator.raw
     let run = run + 1
     reset
   end
   quit 0
 .endc
 "}
-C {devices/launcher.sym} 280 200 0 0 {name=h5
+C {devices/launcher.sym} 70 -410 0 0 {name=h5
 descr="load waves" 
-tclcommand="xschem raw_read $netlist_dir/tb_onehot2mux.raw tran"
-}
-C {devices/lab_pin.sym} -80 60 0 0 {name=p1 lab=VCC}
-C {devices/lab_pin.sym} -80 80 0 0 {name=p2 lab=VSS}
-C {devices/lab_pin.sym} -80 -40 0 0 {name=p3 lab=SEL}
-C {devices/lab_pin.sym} -80 20 0 0 {name=p4 lab=IN1}
-C {devices/lab_pin.sym} 90 -10 0 1 {name=p5 lab=OUT}
-C {devices/lab_pin.sym} -80 -10 0 0 {name=p6 lab=IN0}
+tclcommand="xschem raw_read $netlist_dir/tb_calibrated_comparator.raw tran"}
+C {devices/lab_pin.sym} 80 -180 0 0 {name=p7 lab=EN_N}

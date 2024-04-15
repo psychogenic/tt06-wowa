@@ -53,6 +53,11 @@ set minus vcommon-0.05
 s 200
 set minus vcommon+0.15
 s 200
+set minus vcommon
+set plus vcommon+0.1
+s 300
+set plus vcommon-0.24
+s300
 
 
 

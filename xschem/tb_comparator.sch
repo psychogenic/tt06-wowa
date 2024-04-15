@@ -6,15 +6,15 @@ V {}
 S {}
 E {}
 B 2 1180 -1120 1980 -720 {flags=graph
-y1=0.4
-y2=1.2
+y1=0.314429
+y2=1.37611
 ypos1=0
 ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1e-11
-x2=6e-06
+x1=6.07688e-06
+x2=7.97685e-06
 divx=5
 subdivx=1
 xlabmag=1.0
@@ -35,8 +35,8 @@ ypos2=2
 divy=5
 subdivy=1
 unity=1
-x1=1e-11
-x2=6e-06
+x1=6.07688e-06
+x2=7.97685e-06
 divx=5
 subdivx=1
 xlabmag=1.0
